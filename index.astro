@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VoiceRecorder from "../components/VoiceRecorder.astro";
+import MarkdownPreview from "../components/MarkdownPreview.astro";
+---
+
+<Layout title="Home">
+	<div class="grid md:grid-cols-2 gap-8">
+		<VoiceRecorder />
+		<MarkdownPreview />
+	</div>
+</Layout>
+
+<script src="../scripts/audio-recorder.js"></script>

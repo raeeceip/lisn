@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Settings">
+	<h1 class="text-3xl font-bold mb-6">Settings</h1>
+	<form class="space-y-4">
+		<div>
+			<label for="language" class="block text-sm font-medium text-gray-700"
+				>Preferred Language</label
+			>
+			<select
+				id="language"
+				name="language"
+				class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-md"
+			>
+				<option>English</option>
+				<option>Spanish</option>
+				<option>French</option>
+			</select>
+		</div>
+		<div>
+			<label for="theme" class="block text-sm font-medium text-gray-700"
+				>Theme</label
+			>
+			<select
+				id="theme"
+				name="theme"
+				class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-md"
+			>
+				<option>Light</option>
+				<option>Dark</option>
+				<option>System</option>
+			</select>
+		</div>
+		<button
+			type="submit"
+			class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+		>
+			Save Settings
+		</button>
+	</form>
+</Layout>
