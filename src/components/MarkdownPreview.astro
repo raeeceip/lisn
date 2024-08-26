@@ -1,0 +1,23 @@
+---
+
+---
+
+<div class="markdown-preview p-4 bg-background border rounded-md">
+	<h2 class="text-xl font-bold mb-4">Markdown Preview</h2>
+	<div id="markdownContent" class="prose">
+		<!-- Markdown content will be inserted here -->
+	</div>
+</div>
+
+<script>
+	// This script will update the markdown content
+	function updateMarkdownPreview(markdown: string) {
+		const markdownContent = document.getElementById("markdownContent");
+		if (markdownContent) {
+			markdownContent.innerHTML = markdown;
+		}
+	}
+
+	// Example usage (you'll need to call this function when you receive markdown from the server)
+	// updateMarkdownPreview('# Hello\n\nThis is a markdown preview.');
+</script>

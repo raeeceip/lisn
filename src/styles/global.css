@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-primary: 24 92% 48%;
+	--color-secondary: 0 0% 96%;
+	--color-background: 0 0% 100%;
+	--color-foreground: 0 0% 9%;
+}
+
+.dark {
+	--color-primary: 24 92% 48%;
+	--color-secondary: 0 0% 13%;
+	--color-background: 0 0% 9%;
+	--color-foreground: 0 0% 96%;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+}

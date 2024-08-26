@@ -1,0 +1,59 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<header class="bg-background border-b">
+	<div class="container mx-auto px-4">
+		<div class="flex items-center justify-between h-16">
+			<div class="flex items-center">
+				<a href="/" class="flex items-center space-x-2">
+					<Icon name="microphone" class="h-8 w-8 text-primary" />
+					<span class="text-2xl font-bold text-primary">Lisn</span>
+				</a>
+			</div>
+			<nav class="hidden md:flex space-x-4">
+				<a href="/" class="text-foreground hover:text-primary">Home</a>
+				<a href="/files" class="text-foreground hover:text-primary">My Files</a>
+				<a href="/settings" class="text-foreground hover:text-primary"
+					>Settings</a
+				>
+			</nav>
+			<div class="md:hidden">
+				<button
+					id="mobileMenuButton"
+					class="text-foreground hover:text-primary"
+				>
+					<Icon name="menu" class="h-6 w-6" />
+				</button>
+			</div>
+		</div>
+	</div>
+	<div id="mobileMenu" class="hidden md:hidden">
+		<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+			<a
+				href="/"
+				class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-background-alt"
+				>Home</a
+			>
+			<a
+				href="/files"
+				class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-background-alt"
+				>My Files</a
+			>
+			<a
+				href="/settings"
+				class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-background-alt"
+				>Settings</a
+			>
+		</div>
+	</div>
+</header>
+
+<script>
+	const mobileMenuButton = document.getElementById("mobileMenuButton");
+	const mobileMenu = document.getElementById("mobileMenu");
+
+	mobileMenuButton.addEventListener("click", () => {
+		mobileMenu.classList.toggle("hidden");
+	});
+</script>
